@@ -27,5 +27,12 @@ function editor_assets() {
         $script_asset['version'],
         true
     );
+
+    // Data to JS.
+    $data_array = [
+        'allowedEmbedVariants' => \apply_filters( 'meom_dodo_allowed_embed_variants', [ 'youtube' ] ),
+    ];
+
+    wp_localize_script( 'meom-dodo-editor-scripts', 'meomDodoData', $data_array );
 }
 add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\editor_assets' );
