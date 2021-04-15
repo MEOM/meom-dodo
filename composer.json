@@ -2,7 +2,7 @@
     "name": "meom/meom-dodo",
     "description": "MEOM clean up WP.",
     "type": "wordpress-plugin",
-    "license": "GPLv2 (or later)",
+    "license": "GPL-2.0-or-later",
     "authors": [
         {
             "name": "MEOM tech",
