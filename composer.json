@@ -13,5 +13,6 @@
     "require": {},
     "require-dev": {
         "meom/phpcs-composer": "dev-main"
-    }
+    },
+    "minimum-stability": "dev"
 }

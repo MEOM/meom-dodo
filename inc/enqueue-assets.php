@@ -2,7 +2,7 @@
 /**
  * Register needed scripts and styles.
  *
- * @package MEOM Dodp
+ * @package MEOM Dodo
  */
 
 namespace MEOM\dodo;
@@ -28,7 +28,13 @@ function editor_assets() {
         true
     );
 
-    // Allowed embed variants.
+    /**
+     * Filters the allowed embeds.
+     *
+     * @since 1.0.0
+     *
+     * @param array $allowed_embed_variants Default allowed embeds.
+     */
     $allowed_embed_variants = \apply_filters( 'meom_dodo_allowed_embed_variants', [ 'youtube' ] );
 
     // Data to JS.
