@@ -1,0 +1,16 @@
+{
+    "name": "meom/meom-dodo",
+    "description": "MEOM clean up WP.",
+    "type": "wordpress-plugin",
+    "license": "GPLv2 (or later)",
+    "authors": [
+        {
+            "name": "MEOM tech",
+            "email": "tech@meom.fi"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "meom/phpcs-composer": "dev-main"
+    }
+}
