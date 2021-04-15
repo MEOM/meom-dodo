@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9b22ac0e1dd157003a76c50143fc0990",
+    "content-hash": "42de8e40d0d2dceb854f96f556e4527f",
     "packages": [],
     "packages-dev": [
         {
             "name": "dealerdirect/phpcodesniffer-composer-installer",
-            "version": "v0.7.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dealerdirect/phpcodesniffer-composer-installer.git",
-                "reference": "fe390591e0241955f22eb9ba327d137e501c771c"
+                "reference": "c960cf4629fab7155caca18c038ca7257b7595e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Dealerdirect/phpcodesniffer-composer-installer/zipball/fe390591e0241955f22eb9ba327d137e501c771c",
-                "reference": "fe390591e0241955f22eb9ba327d137e501c771c",
+                "url": "https://api.github.com/repos/Dealerdirect/phpcodesniffer-composer-installer/zipball/c960cf4629fab7155caca18c038ca7257b7595e3",
+                "reference": "c960cf4629fab7155caca18c038ca7257b7595e3",
                 "shasum": ""
             },
             "require": {
@@ -28,8 +28,8 @@
             },
             "require-dev": {
                 "composer/composer": "*",
-                "phpcompatibility/php-compatibility": "^9.0",
-                "sensiolabs/security-checker": "^4.1.0"
+                "enlightn/security-checker": "^1.2",
+                "phpcompatibility/php-compatibility": "^9.0"
             },
             "type": "composer-plugin",
             "extra": {
@@ -71,7 +71,7 @@
                 "stylecheck",
                 "tests"
             ],
-            "time": "2020-12-07T18:04:37+00:00"
+            "time": "2021-03-14T13:49:41+00:00"
         },
         {
             "name": "meom/phpcs-composer",
@@ -267,16 +267,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.6.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "ffced0d2c8fa8e6cdc4d695a743271fab6c38625"
+                "reference": "e9a865216c5678d92370c8c56053190b20ab1112"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/ffced0d2c8fa8e6cdc4d695a743271fab6c38625",
-                "reference": "ffced0d2c8fa8e6cdc4d695a743271fab6c38625",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/e9a865216c5678d92370c8c56053190b20ab1112",
+                "reference": "e9a865216c5678d92370c8c56053190b20ab1112",
                 "shasum": ""
             },
             "require": {
@@ -314,11 +314,11 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2021-04-09T00:54:41+00:00"
+            "time": "2021-04-14T23:41:25+00:00"
         },
         {
             "name": "wp-coding-standards/wpcs",
-            "version": "2.3.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress/WordPress-Coding-Standards.git",
@@ -364,7 +364,7 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
         "meom/phpcs-composer": 20
     },
