@@ -1,0 +1,35 @@
+{
+  "name": "meom-dodo",
+  "version": "1.0.0",
+  "description": "MEOM Dodo project",
+  "author": "MEOM Oy",
+  "license": "GPL-2.0-or-later",
+  "keywords": [
+    "WordPress",
+    "editor"
+  ],
+  "homepage": "https://github.com/MEOM/meom-dodo",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MEOM/meom-dodo"
+  },
+  "bugs": "https://github.com/MEOM/meom-dodo/issues",
+  "engines": {
+    "node": ">=12.0.0",
+    "npm": ">=6.9.0"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^14.1.1"
+  },
+  "scripts": {
+    "build": "wp-scripts build",
+    "check-engines": "wp-scripts check-engines",
+    "format:js": "wp-scripts format-js 'htdocs/wp-content/themes/agcosuomi/js/**/*.js'",
+    "lint": "npm run lint:css && npm run lint:js",
+    "lint:css": "wp-scripts lint-style 'htdocs/wp-content/themes/agcosuomi/scss/**/*.scss'",
+    "lint:js": "wp-scripts lint-js 'htdocs/wp-content/themes/agcosuomi/js/**/*.js'",
+    "lint:pkg-json": "wp-scripts lint-pkg-json",
+    "start": "wp-scripts start"
+  }
+}
