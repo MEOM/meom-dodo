@@ -39,31 +39,8 @@ function contact_settings_init() {
         __NAMESPACE__ . '\settings_section_callback',
         'meom_dodo_contact'
     );
-
-    add_settings_field(
-        'meom_dodo_test_field',
-        esc_html__( 'Show all admin menu items', 'meom-dodo' ),
-        __NAMESPACE__ . '\field_render',
-        'meom_dodo_contact',
-        'meom_dodo_contact_section',
-        [
-            'label_for' => 'meom_dodo_test_field',
-            'class'     => 'meom_dodo_contact_row',
-        ]
-    );
 }
 add_action( 'admin_init', __NAMESPACE__ . '\contact_settings_init' );
-
-/**
- * Render checkbox for enabling all admin menu items.
- *
- * @return void
- */
-function field_render() {
-    ?>
-    <input type="checkbox" id="meom_dodo_test_field" name="meom_dodo_contact_settings[meom_dodo_test_field]">
-    <?php
-}
 
 /**
  * Render page description.
@@ -87,8 +64,58 @@ function meom_contact_page() {
         <?php
         settings_fields( 'meom_dodo_contact' );
         do_settings_sections( 'meom_dodo_contact' );
-        submit_button();
         ?>
     </form>
     <?php
 }
+
+/**
+ * Adds expire date in user profile.
+ *
+ * Only user with 'edd_members_edit_user' can edit expire date.
+ *
+ * @since  1.0.0
+ * @return void
+ */
+function allow_all_admin_menu_items( $user ) {
+    // Get expire date
+    $allow_all_menu_items = get_user_option( '_meom_allow_all_menu_items', $user->ID );
+    ?>
+    <h2><?php esc_html_e( 'Show all admin menu items', 'meom-dodo' ); ?></h2>
+
+    <table class="form-table" role="presentation">
+        <tr>
+            <th scope="row"><?php esc_html_e( 'Admin menu items', 'meom-dodo' ); ?></th>
+            <td>
+                <input type="checkbox" name="meom_allow_all_menu_items" id="meom_allow_all_menu_items" <?php \checked( $allow_all_menu_items ); ?>>
+                <label for="meom_allow_all_menu_items"><?php esc_html_e( 'Allow all admin menu items', 'meom-dodo' ); ?></label>
+            </td>
+        </tr>
+    </table>
+
+<?php }
+add_action( 'show_user_profile', __NAMESPACE__ . '\allow_all_admin_menu_items' );
+add_action( 'edit_user_profile', __NAMESPACE__ . '\allow_all_admin_menu_items' );
+
+/**
+ * Save expire date in user profile.
+ *
+ * Only user with 'edd_members_edit_user' or 'manage_shop_settings' can save expire date.
+ *
+ * @since  1.0.0
+ * @return void
+ */
+function save_all_admin_menu_items( $user_id ) {
+    // Get checkbox value.
+    $allow_all_menu_items_checkbox = isset( $_POST['meom_allow_all_menu_items'] ) ? true : false;
+
+    // This will add blog prefix in multisite.
+    if ( is_multisite() ) {
+        update_user_option( $user_id, '_meom_allow_all_menu_items', $allow_all_menu_items_checkbox );
+    }
+
+    // Update user meta.
+    update_user_meta( $user_id, '_meom_allow_all_menu_items', $allow_all_menu_items_checkbox );
+}
+add_action( 'personal_options_update', __NAMESPACE__ . '\save_all_admin_menu_items' );
+add_action( 'edit_user_profile_update', __NAMESPACE__ . '\save_all_admin_menu_items' );
