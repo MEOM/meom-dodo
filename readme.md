@@ -12,7 +12,7 @@ MEOM Dodo plugin for cleaning up WordPress.
 Use Composer to install the package.
 
 ```bash
-composer require meom/meom-dodo ^1.0
+composer require meom/meom-dodo
 ```
 
 Or if living on the edge:
