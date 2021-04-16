@@ -12,5 +12,6 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+require_once dirname( __FILE__ ) . '/inc/contact-page.php';
 require_once dirname( __FILE__ ) . '/inc/enqueue-assets.php';
 require_once dirname( __FILE__ ) . '/inc/remove-editor-settings.php';

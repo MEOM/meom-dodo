@@ -1,4 +1,14 @@
 <?xml version="1.0"?>
 <ruleset name="Project Rules">
     <rule ref="MEOM-default" />
+
+    <!-- Verify that the text_domain is set to the desired text-domain.
+        Multiple valid text domains can be provided as a new element. -->
+    <rule ref="WordPress.WP.I18n">
+        <properties>
+            <property name="text_domain" type="array">
+                <element value="meom-dodo"/>
+            </property>
+        </properties>
+    </rule>
 </ruleset>
