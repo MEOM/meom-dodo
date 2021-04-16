@@ -13,4 +13,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 require_once dirname( __FILE__ ) . '/inc/enqueue-assets.php';
+require_once dirname( __FILE__ ) . '/inc/remove-admin-menu-items.php';
 require_once dirname( __FILE__ ) . '/inc/remove-editor-settings.php';
