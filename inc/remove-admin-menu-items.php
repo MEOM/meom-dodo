@@ -12,6 +12,26 @@ namespace MEOM\dodo;
  */
 function remove_admin_menu_items() {
     /**
+     * Filters when to show all admin menu items.
+     *
+     * Be default show everything when not on production.
+     *
+     * @since 1.0.3
+     *
+     * @param array $show_all_admin_menu_items When to show all admin menu items.
+     */
+    $show_all_admin_menu_items =
+    \apply_filters(
+        'meom_dodo_show_all_admin_menu_items',
+        function_exists( 'getenv' ) && getenv( 'WP_ENV' ) !== 'production'
+    );
+
+    // Bail based on when to show all admin menu items.
+    if ( $show_all_admin_menu_items ) {
+        return;
+    }
+
+    /**
      * Filters the hidden admin menu items.
      *
      * @since 1.0.3
