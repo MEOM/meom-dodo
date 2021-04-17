@@ -90,6 +90,8 @@ function allow_all_admin_menu_items( $user ) {
             <td>
                 <input type="checkbox" name="meom_dodo_allow_all_menu_items" id="meom_dodo_allow_all_menu_items" <?php \checked( $allow_all_menu_items ); ?>>
                 <label for="meom_dodo_allow_all_menu_items"><?php esc_html_e( 'Allow all admin menu items', 'meom-dodo' ); ?></label>
+
+                <?php wp_nonce_field( 'meom_dodo_allow_all_nonce_action', 'meom_dodo_allow_all_nonce_field' ); ?>
             </td>
         </tr>
     </table>
@@ -108,6 +110,18 @@ add_action( 'edit_user_profile', __NAMESPACE__ . '\allow_all_admin_menu_items' )
  * @return bool Meta ID if the key didn't exist, true on successful update, false on failure.
  */
 function save_all_admin_menu_items( $user_id ) {
+    // Check user cabability.
+    if ( ! current_user_can( 'edit_user', $user_id ) ) {
+        return false;
+    }
+
+    // Verify nonce.
+    if ( ! isset( $_POST['meom_dodo_allow_all_nonce_field'] )
+    || ! wp_verify_nonce( $_POST['meom_dodo_allow_all_nonce_field'], 'meom_dodo_allow_all_nonce_action' )
+    ) {
+        return false;
+    }
+
     // Get checkbox value.
     $allow_all_menu_items_checkbox = isset( $_POST['meom_dodo_allow_all_menu_items'] ) ? true : false;
 
