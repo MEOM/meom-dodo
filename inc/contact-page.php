@@ -74,12 +74,13 @@ function meom_contact_page() {
  *
  * Only user with 'edd_members_edit_user' can edit expire date.
  *
- * @since  1.0.0
+ * @param $user WP_User user object.
+ *
  * @return void
  */
 function allow_all_admin_menu_items( $user ) {
-    // Get expire date
-    $allow_all_menu_items = get_user_option( '_meom_allow_all_menu_items', $user->ID );
+    // Get user meta for allowing all admin menu items.
+    $allow_all_menu_items = get_user_option( '_meom_dodo_allow_all_menu_items', $user->ID );
     ?>
     <h2><?php esc_html_e( 'Show all admin menu items', 'meom-dodo' ); ?></h2>
 
@@ -87,35 +88,36 @@ function allow_all_admin_menu_items( $user ) {
         <tr>
             <th scope="row"><?php esc_html_e( 'Admin menu items', 'meom-dodo' ); ?></th>
             <td>
-                <input type="checkbox" name="meom_allow_all_menu_items" id="meom_allow_all_menu_items" <?php \checked( $allow_all_menu_items ); ?>>
-                <label for="meom_allow_all_menu_items"><?php esc_html_e( 'Allow all admin menu items', 'meom-dodo' ); ?></label>
+                <input type="checkbox" name="meom_dodo_allow_all_menu_items" id="meom_dodo_allow_all_menu_items" <?php \checked( $allow_all_menu_items ); ?>>
+                <label for="meom_dodo_allow_all_menu_items"><?php esc_html_e( 'Allow all admin menu items', 'meom-dodo' ); ?></label>
             </td>
         </tr>
     </table>
-
-<?php }
+    <?php
+}
 add_action( 'show_user_profile', __NAMESPACE__ . '\allow_all_admin_menu_items' );
 add_action( 'edit_user_profile', __NAMESPACE__ . '\allow_all_admin_menu_items' );
 
 /**
- * Save expire date in user profile.
+ * Save in user meta.
  *
  * Only user with 'edd_members_edit_user' or 'manage_shop_settings' can save expire date.
  *
- * @since  1.0.0
- * @return void
+ * @param $user_id int the ID of the current user.
+ *
+ * @return bool Meta ID if the key didn't exist, true on successful update, false on failure.
  */
 function save_all_admin_menu_items( $user_id ) {
     // Get checkbox value.
-    $allow_all_menu_items_checkbox = isset( $_POST['meom_allow_all_menu_items'] ) ? true : false;
+    $allow_all_menu_items_checkbox = isset( $_POST['meom_dodo_allow_all_menu_items'] ) ? true : false;
 
     // This will add blog prefix in multisite.
     if ( is_multisite() ) {
-        update_user_option( $user_id, '_meom_allow_all_menu_items', $allow_all_menu_items_checkbox );
+        update_user_option( $user_id, '_meom_dodo_allow_all_menu_items', $allow_all_menu_items_checkbox );
     }
 
     // Update user meta.
-    update_user_meta( $user_id, '_meom_allow_all_menu_items', $allow_all_menu_items_checkbox );
+    update_user_meta( $user_id, '_meom_dodo_allow_all_menu_items', $allow_all_menu_items_checkbox );
 }
 add_action( 'personal_options_update', __NAMESPACE__ . '\save_all_admin_menu_items' );
 add_action( 'edit_user_profile_update', __NAMESPACE__ . '\save_all_admin_menu_items' );
