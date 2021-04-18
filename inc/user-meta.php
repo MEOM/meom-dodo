@@ -44,7 +44,7 @@ add_action( 'edit_user_profile', __NAMESPACE__ . '\allow_all_admin_menu_items' )
  * @return bool true on successful update, false on failure.
  */
 function save_all_admin_menu_items( $user_id ) {
-    // Check user cabability.
+    // Check user capability.
     if ( ! current_user_can( 'edit_user', $user_id ) ) {
         return false;
     }
