@@ -2,6 +2,8 @@
 
 MEOM Dodo plugin for cleaning up WordPress.
 
+![MEOM dodo logo with round text "do good work for good people".](assets/images/meom-dodo-logo.jpg)
+
 ## Requirements
 
 * PHP 7+.
