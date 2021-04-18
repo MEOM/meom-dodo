@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // Load text domain.
 function meom_dodo_i18n() {
-    load_plugin_textdomain( 'meom-dodo', false, trailingslashit( dirname( plugin_basename( __FILE__ ) ) ) . 'languages' );
+    load_muplugin_textdomain( 'meom-dodo', trailingslashit( dirname( plugin_basename( __FILE__ ) ) ) . 'languages' );
 }
 add_action( 'plugins_loaded', 'meom_dodo_i18n', 2 );
 
