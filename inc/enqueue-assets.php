@@ -31,8 +31,6 @@ function editor_assets() {
     /**
      * Filters the allowed embeds.
      *
-     * @since 1.0.0
-     *
      * @param array $allowed_embed_variants Default allowed embeds.
      */
     $allowed_embed_variants = \apply_filters( 'meom_dodo_allowed_embed_variants', [ 'youtube' ] );

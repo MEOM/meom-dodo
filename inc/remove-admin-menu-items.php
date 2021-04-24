@@ -14,9 +14,7 @@ function remove_admin_menu_items() {
     /**
      * Filters when to show all admin menu items.
      *
-     * Be default show everything when not on production.
-     *
-     * @since 1.0.3
+     * By default show everything when not on production.
      *
      * @param array $show_all_admin_menu_items When to show all admin menu items.
      */
@@ -33,8 +31,6 @@ function remove_admin_menu_items() {
 
     /**
      * Filters the hidden admin menu items.
-     *
-     * @since 1.0.3
      *
      * @param array $removed_admin_menu_items Default hidden admin menu items.
      */
