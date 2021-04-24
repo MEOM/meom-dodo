@@ -5,7 +5,7 @@
  * @package MEOM Dodo
  */
 
-namespace MEOM\dodo;
+namespace MEOM\Dodo;
 
 /**
  * Adds allow all menu items checkbox in user profile.

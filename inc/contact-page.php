@@ -5,7 +5,7 @@
  * @package MEOM Dodo
  */
 
-namespace MEOM\dodo;
+namespace MEOM\Dodo;
 
 /**
  * Create the contact page.
