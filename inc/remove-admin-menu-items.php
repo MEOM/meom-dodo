@@ -40,11 +40,16 @@ function remove_admin_menu_items() {
         [
             'plugins.php',
             'edit.php?post_type=acf-field-group',
+            'edit-comments.php',
+            'themes.php',
         ]
     );
 
     foreach ( $removed_admin_menu_items as $removed_admin_menu_item ) {
         remove_menu_page( \esc_attr( $removed_admin_menu_item ) );
     }
+
+    // Add nav back as top level menu item.
+    add_menu_page( \esc_html__( 'Menus', 'meom-dodo' ), \esc_html__( 'Menus', 'meom-dodo' ), 'manage_options', 'nav-menus.php', '', 'dashicons-menu', 25 );
 }
-add_action( 'admin_init', __NAMESPACE__ . '\remove_admin_menu_items' );
+add_action( 'admin_menu', __NAMESPACE__ . '\remove_admin_menu_items' );
