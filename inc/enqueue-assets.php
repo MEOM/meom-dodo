@@ -5,7 +5,7 @@
  * @package MEOM Dodo
  */
 
-namespace MEOM\dodo;
+namespace MEOM\Dodo;
 
 /**
  * Register editor assets
@@ -30,8 +30,6 @@ function editor_assets() {
 
     /**
      * Filters the allowed embeds.
-     *
-     * @since 1.0.0
      *
      * @param array $allowed_embed_variants Default allowed embeds.
      */

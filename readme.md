@@ -49,3 +49,29 @@ function prefix_gutenberg_allowed_embeds( $allowed_embeds ) {
 }
 add_filter( 'meom_dodo_allowed_embed_variants','prefix_gutenberg_allowed_embeds' );
 ```
+
+### meom_dodo_removed_admin_menu_items
+
+By default some admin menu items are removed. You can modify the list of removed admin menu items with the filter `meom_dodo_removed_admin_menu_items`.
+
+Example usage:
+
+```php
+/**
+ * Determine which admin menu items are removed.
+ *
+ * @param array  $removed_admin_menu_items List of removed admin menu items.
+ * @return array $removed_admin_menu_items Modified array of removed admin menu items.
+ */
+function prefix_removed_admin_menu_items( $removed_admin_menu_items ) {
+    $removed_admin_menu_items = [
+        'plugins.php',
+        'edit.php?post_type=acf-field-group',
+        'themes.php',
+        'users.php',
+    ];
+
+    return $removed_admin_menu_items;
+}
+add_filter( 'meom_dodo_removed_admin_menu_items', 'prefix_removed_admin_menu_items' );
+```
