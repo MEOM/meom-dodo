@@ -22,7 +22,6 @@ function meom_dodo_i18n() {
 add_action( 'plugins_loaded', 'meom_dodo_i18n', 2 );
 
 require_once dirname( __FILE__ ) . '/inc/contact-dashboard-widget.php';
-require_once dirname( __FILE__ ) . '/inc/contact-page.php';
 require_once dirname( __FILE__ ) . '/inc/enqueue-assets.php';
 require_once dirname( __FILE__ ) . '/inc/remove-admin-menu-items.php';
 require_once dirname( __FILE__ ) . '/inc/remove-editor-settings.php';
