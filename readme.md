@@ -50,30 +50,6 @@ function prefix_gutenberg_allowed_embeds( $allowed_embeds ) {
 add_filter( 'meom_dodo_allowed_embed_variants','prefix_gutenberg_allowed_embeds' );
 ```
 
-### meom_dodo_show_all_admin_menu_items
-
-By default all the admin menu items are shown when you are not on production environment.
-
-You can modify this with the filter `meom_dodo_show_all_admin_menu_items`.
-
-Example usage:
-
-```php
-/**
- * Determine when all admin menu items are shown.
- *
- * @param boolean  $show_all_admin_menu_items Boolean when to show all admin menu items.
- * @return boolean $show_all_admin_menu_items Modified boolean when to show all admin menu items.
- */
-function prefix_show_all_admin_menu_items( $show_all_admin_menu_items ) {
-    // Show admin menu items always
-    $show_all_admin_menu_items = true;
-
-    return $show_all_admin_menu_items;
-}
-add_filter( 'meom_dodo_show_all_admin_menu_items', 'prefix_show_all_admin_menu_items' );
-```
-
 ### meom_dodo_removed_admin_menu_items
 
 By default some admin menu items are removed. You can modify the list of removed admin menu items with the filter `meom_dodo_removed_admin_menu_items`.
