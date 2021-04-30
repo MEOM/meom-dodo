@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: MEOM Dodo\n"
-"POT-Creation-Date: 2021-04-30 09:01+0300\n"
+"POT-Creation-Date: 2021-04-30 09:10+0300\n"
 "PO-Revision-Date: 2021-04-16 15:26+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -22,21 +22,8 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 
-#: inc/contact-dashboard-widget.php:16 inc/contact-page.php:64
+#: inc/contact-dashboard-widget.php:16
 msgid "Contact MEOM"
-msgstr ""
-
-#: inc/contact-page.php:17 inc/contact-page.php:18
-msgid "MEOM Contact"
-msgstr ""
-
-#: inc/contact-page.php:38
-msgid "Contact MEOM details"
-msgstr ""
-
-#: inc/contact-page.php:51
-#, php-format
-msgid "Contact MEOM using email %s."
 msgstr ""
 
 #: inc/remove-admin-menu-items.php:44

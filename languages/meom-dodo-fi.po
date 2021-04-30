@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MEOM Dodo\n"
-"POT-Creation-Date: 2021-04-30 09:01+0300\n"
-"PO-Revision-Date: 2021-04-30 09:02+0300\n"
+"POT-Creation-Date: 2021-04-30 09:10+0300\n"
+"PO-Revision-Date: 2021-04-30 09:10+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fi\n"
@@ -22,22 +22,9 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 
-#: inc/contact-dashboard-widget.php:16 inc/contact-page.php:64
+#: inc/contact-dashboard-widget.php:16
 msgid "Contact MEOM"
 msgstr "MEOM yhteystiedot"
-
-#: inc/contact-page.php:17 inc/contact-page.php:18
-msgid "MEOM Contact"
-msgstr "MEOM yhteystiedot"
-
-#: inc/contact-page.php:38
-msgid "Contact MEOM details"
-msgstr "MEOM yhteystiedot tiedot"
-
-#: inc/contact-page.php:51
-#, php-format
-msgid "Contact MEOM using email %s."
-msgstr "Ota yhteyttä MEOM:iin, sähköposti %s."
 
 #: inc/remove-admin-menu-items.php:44
 msgid "Menus"
@@ -66,3 +53,13 @@ msgstr "MEOM"
 #. Author URI of the plugin/theme
 msgid "https://www.meom.fi/"
 msgstr "https://www.meom.fi/"
+
+#~ msgid "MEOM Contact"
+#~ msgstr "MEOM yhteystiedot"
+
+#~ msgid "Contact MEOM details"
+#~ msgstr "MEOM yhteystiedot tiedot"
+
+#, php-format
+#~ msgid "Contact MEOM using email %s."
+#~ msgstr "Ota yhteyttä MEOM:iin, sähköposti %s."
