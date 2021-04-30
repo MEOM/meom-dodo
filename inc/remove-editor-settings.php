@@ -5,7 +5,7 @@
  * @package MEOM Dodo
  */
 
-namespace MEOM\dodo;
+namespace MEOM\Dodo;
 
 /**
  * Remove drop cap setting from paragraphs.
