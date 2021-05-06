@@ -2,6 +2,8 @@
 
 MEOM Dodo plugin for cleaning up WordPress.
 
+![MEOM dodo logo.](assets/images/MEOM-dodo-logo.png)
+
 ## Requirements
 
 * PHP 7+.
