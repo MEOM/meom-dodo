@@ -52,11 +52,29 @@ function prefix_gutenberg_allowed_embeds( $allowed_embeds ) {
 add_filter( 'meom_dodo_allowed_embed_variants','prefix_gutenberg_allowed_embeds' );
 ```
 
+### meom_dodo_remove_drop_cap
+
+Allow drop cap with the filter `meom_dodo_remove_drop_cap`.
+
+Example usage:
+
+```php
+add_filter( 'meom_dodo_remove_drop_cap', '__return_false' );
+```
+
+### meom_dodo_remove_block_directory
+
+Allow block directory with the filter `meom_dodo_remove_block_directory`.
+
+Example usage:
+
+```php
+add_filter( 'meom_dodo_remove_block_directory', '__return_false' );
+```
+
 ### meom_dodo_removed_admin_menu_items
 
 By default some admin menu items are removed. You can modify the list of removed admin menu items with the filter `meom_dodo_removed_admin_menu_items`.
-
-Example usage:
 
 ```php
 /**
