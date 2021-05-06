@@ -4,7 +4,7 @@
  * Author: MEOM
  * Author URI: https://www.meom.fi/
  * Description: Clean up WordPress.
- * Version: 1.0.2
+ * Version: 1.1
  */
 
 // Exit if accessed directly.
