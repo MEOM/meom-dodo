@@ -13,7 +13,10 @@ namespace MEOM\Dodo;
  * @return void
  */
 function add_dashboard_contact_widget() {
-    wp_add_dashboard_widget( 'meom_dodo_contact_widget', esc_html__( 'Contact MEOM', 'meom-dodo' ), __NAMESPACE__ . '\contact_content', null, null, 'normal', 'high' );
+    // Allow filtering contact content.
+    if ( \apply_filters( 'meom_dodo_show_contact_content', true ) ) {
+        wp_add_dashboard_widget( 'meom_dodo_contact_widget', esc_html__( 'Contact MEOM', 'meom-dodo' ), __NAMESPACE__ . '\contact_content', null, null, 'normal', 'high' );
+    }
 }
 add_action( 'wp_dashboard_setup', __NAMESPACE__ . '\add_dashboard_contact_widget' );
 
