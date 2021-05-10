@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: MEOM Dodo\n"
-"POT-Creation-Date: 2021-04-30 09:10+0300\n"
+"POT-Creation-Date: 2021-05-10 16:40+0300\n"
 "PO-Revision-Date: 2021-04-16 15:26+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -22,8 +22,35 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 
-#: inc/contact-dashboard-widget.php:16
+#: inc/contact-dashboard-widget.php:18
 msgid "Contact MEOM"
+msgstr ""
+
+#: inc/contact-dashboard-widget.php:30
+#, php-format
+msgid ""
+"In case you encounter some problems on the site, you can contact MEOM "
+"support by email %s."
+msgstr ""
+
+#: inc/contact-dashboard-widget.php:31
+msgid ""
+"Please provide a detailed description of the problem, including its "
+"location and the device and the browser you are using."
+msgstr ""
+
+#: inc/contact-dashboard-widget.php:32
+#, php-format
+msgid ""
+"In case you need some help with content editing, marketing, SEO-related "
+"tasks or something similar, you can take contact to the same address %s."
+msgstr ""
+
+#: inc/contact-dashboard-widget.php:33
+#, php-format
+msgid ""
+"In case you wish to have more features, a new look or any further "
+"development for the site, please contact %s."
 msgstr ""
 
 #: inc/remove-admin-menu-items.php:44

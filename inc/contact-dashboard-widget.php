@@ -27,9 +27,9 @@ add_action( 'wp_dashboard_setup', __NAMESPACE__ . '\add_dashboard_contact_widget
  */
 function contact_content() {
     ?>
-    <p>Mikäli kohtaat sivustolla ongelmia, voit ottaa yhteyttä MEOMin tukeen sähköpostilla <a href="mailto:support@meom.fi">support@meom.fi</a>.</p> 
-    <p>Kerrothan viestissäsi tarkan kuvauksen ongelmasta ja sen sijainnista sekä käyttämäsi selaimen ja laitteen.</p>
-    <P>Mikäli tarvitset apua sisällönsyöttöön, markkinointiin, SEO-asioihin tai muuhun vastaavaan, voit ottaa yhteyttä samaan osoitteeseen <a href="mailto:support@meom.fi">support@meom.fi</a>.</p>
-    <p>Mikäli haluat sivustolle lisää ominaisuuksia, uutta ilmettä tai mitä vain lisäkehitystä, niin ota yhteyttä <a href="mailto:sales@meom.fi">sales@meom.fi</a>.</p>
+    <p><?php printf( esc_html__( 'In case you encounter some problems on the site, you can contact MEOM support by email %s.', 'meom-dodo' ), '<a href="mailto:support@meom.fi">support@meom.fi</a>' ); ?></p> 
+    <p><?php esc_html_e( 'Please provide a detailed description of the problem, including its location and the device and the browser you are using.', 'meom-dodo' ); ?></p>
+    <p><?php printf( esc_html__( 'In case you need some help with content editing, marketing, SEO-related tasks or something similar, you can take contact to the same address %s.', 'meom-dodo' ), '<a href="mailto:support@meom.fi">support@meom.fi</a>' ); ?></p>
+    <p><?php printf( esc_html__( 'In case you wish to have more features, a new look or any further development for the site, please contact %s.', 'meom-dodo' ), '<a href="mailto:sales@meom.fi">sales@meom.fi</a>' ); ?></p>
     <?php
 }

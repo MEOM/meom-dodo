@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MEOM Dodo\n"
-"POT-Creation-Date: 2021-04-30 09:10+0300\n"
-"PO-Revision-Date: 2021-04-30 09:10+0300\n"
+"POT-Creation-Date: 2021-05-10 16:40+0300\n"
+"PO-Revision-Date: 2021-05-10 16:42+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fi\n"
@@ -16,15 +16,50 @@ msgstr ""
 "X-Poedit-WPHeader: meom-dodo.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
-"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 
-#: inc/contact-dashboard-widget.php:16
+#: inc/contact-dashboard-widget.php:18
 msgid "Contact MEOM"
 msgstr "MEOM yhteystiedot"
+
+#: inc/contact-dashboard-widget.php:30
+#, php-format
+msgid ""
+"In case you encounter some problems on the site, you can contact MEOM "
+"support by email %s."
+msgstr ""
+"Mikäli kohtaat sivustolla ongelmia, voit ottaa yhteyttä MEOMin tukeen "
+"sähköpostilla %s."
+
+#: inc/contact-dashboard-widget.php:31
+msgid ""
+"Please provide a detailed description of the problem, including its location "
+"and the device and the browser you are using."
+msgstr ""
+"Kerrothan viestissäsi tarkan kuvauksen ongelmasta ja sen sijainnista sekä "
+"käyttämäsi selaimen ja laitteen."
+
+#: inc/contact-dashboard-widget.php:32
+#, php-format
+msgid ""
+"In case you need some help with content editing, marketing, SEO-related "
+"tasks or something similar, you can take contact to the same address %s."
+msgstr ""
+"Mikäli tarvitset apua sisällönsyöttöön, markkinointiin, SEO-asioihin tai "
+"muuhun vastaavaan, voit ottaa yhteyttä samaan osoitteeseen %s."
+
+#: inc/contact-dashboard-widget.php:33
+#, php-format
+msgid ""
+"In case you wish to have more features, a new look or any further "
+"development for the site, please contact %s."
+msgstr ""
+"Mikäli haluat sivustolle lisää ominaisuuksia, uutta ilmettä tai mitä vain "
+"lisäkehitystä, niin ota yhteyttä %s."
 
 #: inc/remove-admin-menu-items.php:44
 msgid "Menus"
