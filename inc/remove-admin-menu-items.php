@@ -12,6 +12,15 @@ namespace MEOM\Dodo;
  */
 function remove_admin_menu_items() {
     /**
+     * Check has user "Show all admin menu items" checked in their profile.
+     */
+    $allow_all_menu_items = get_user_option( '_meom_dodo_allow_all_menu_items', get_current_user_id() );
+
+    if ( $allow_all_menu_items ) {
+        return;
+    }
+
+    /**
      * Filters the hidden admin menu items.
      *
      * @param array $removed_admin_menu_items Default hidden admin menu items.

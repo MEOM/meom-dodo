@@ -72,6 +72,16 @@ Example usage:
 add_filter( 'meom_dodo_remove_block_directory', '__return_false' );
 ```
 
+### meom_dodo_show_contact_content
+
+Hide contact content admin widget with the filter `meom_dodo_show_contact_content`.
+
+Example usage:
+
+```php
+add_filter( 'meom_dodo_show_contact_content', '__return_false' );
+```
+
 ### meom_dodo_removed_admin_menu_items
 
 By default some admin menu items are removed. You can modify the list of removed admin menu items with the filter `meom_dodo_removed_admin_menu_items`.
