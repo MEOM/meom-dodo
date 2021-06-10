@@ -1,10 +1,13 @@
 # Changelog
 
-## Version 1.1 released [ADD DATE]
+## Version 1.1 released June 10, 2021
 
 ### Added
+- Add contact dashboard widget.
+- Add user setting for allowing hidden admin menu items: "Show all admin menu items".
 - Add filters for allowing drop cap and block directory support: `meom_dodo_remove_drop_cap` and `meom_dodo_remove_block_directory`.
 - Add logo in the readme file.
+- Add translations.
 
 
 ## Version 1.0.2 released April 15, 2021
