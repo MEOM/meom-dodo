@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 1.2 released January 7, 2022
+
+### Updated
+Updated filter `block_editor_settings` to `block_editor_settings_all`.
+
 ## Version 1.1 released June 10, 2021
 
 ### Added
