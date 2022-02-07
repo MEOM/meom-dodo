@@ -22,7 +22,7 @@ function remove_drop_cap( $editor_settings ) {
 
     return $editor_settings;
 }
-add_filter( 'block_editor_settings', __NAMESPACE__ . '\remove_drop_cap' );
+add_filter( 'block_editor_settings_all', __NAMESPACE__ . '\remove_drop_cap' );
 
 /**
  * Remove block directory.
