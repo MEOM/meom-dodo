@@ -4,7 +4,7 @@
  * Author: MEOM
  * Author URI: https://www.meom.fi/
  * Description: Clean up WordPress.
- * Version: 1.1
+ * Version: 1.3
  * License: GPL2 or later.
  * Text Domain: meom-dodo
  * Domain Path: /languages

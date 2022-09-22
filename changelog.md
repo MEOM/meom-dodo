@@ -1,5 +1,11 @@
 # Changelog
 
+## Version 1.3 released September 22, 2022
+
+### Added
+- Remove layout support.
+- Add utility classes.
+
 ## Version 1.2 released January 7, 2022
 
 ### Updated
