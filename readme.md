@@ -72,6 +72,26 @@ Example usage:
 add_filter( 'meom_dodo_remove_block_directory', '__return_false' );
 ```
 
+### meom_dodo_remove_layout_support
+
+Allow layout support with the filter `meom_dodo_remove_layout_support`.
+
+Example usage:
+
+```php
+add_filter( 'meom_dodo_remove_layout_support', '__return_false' );
+```
+
+### meom_dodo_add_utility_classes
+
+Remove adding utility classes with the filter `meom_dodo_add_utility_classes`.
+
+Example usage:
+
+```php
+add_filter( 'meom_dodo_add_utility_classes', '__return_false' );
+```
+
 ### meom_dodo_show_contact_content
 
 Hide contact content admin widget with the filter `meom_dodo_show_contact_content`.
