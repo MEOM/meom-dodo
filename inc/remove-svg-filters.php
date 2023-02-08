@@ -8,7 +8,7 @@
 namespace MEOM\Dodo;
 
 /**
- * Remove layout support, which means removing inline styles.
+ * Remove SVG filters.
  *
  * @return void
  */
