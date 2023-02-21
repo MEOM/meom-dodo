@@ -82,6 +82,16 @@ Example usage:
 add_filter( 'meom_dodo_remove_layout_support', '__return_false' );
 ```
 
+### meom_dodo_remove_svg_filters
+
+Allow SVG filters with the filter `meom_dodo_remove_svg_filters`.
+
+Example usage:
+
+```php
+add_filter( 'meom_dodo_remove_svg_filters', '__return_false' );
+```
+
 ### meom_dodo_add_utility_classes
 
 Remove adding utility classes with the filter `meom_dodo_add_utility_classes`.

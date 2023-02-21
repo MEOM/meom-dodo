@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 1.4 released February 8, 2023
+
+### Added
+- Remove SVG filters.
+
 ## Version 1.3 released September 22, 2022
 
 ### Added
