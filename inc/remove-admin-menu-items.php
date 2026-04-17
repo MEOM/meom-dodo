@@ -12,6 +12,18 @@ namespace MEOM\Dodo;
  */
 function remove_admin_menu_items() {
     /**
+     * Filters whether the admin menu item removal feature is enabled.
+     *
+     * Allows themes to disable this feature entirely, e.g.:
+     * add_filter( 'meom_dodo_enable_admin_menu_removal', '__return_false' );
+     *
+     * @param bool $enabled Whether the feature is enabled. Default true.
+     */
+    if ( ! \apply_filters( 'meom_dodo_enable_admin_menu_removal', true ) ) {
+        return;
+    }
+
+    /**
      * Check has user "Show all admin menu items" checked in their profile.
      */
     $allow_all_menu_items = get_user_option( '_meom_dodo_allow_all_menu_items', get_current_user_id() );

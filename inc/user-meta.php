@@ -15,6 +15,11 @@ namespace MEOM\Dodo;
  * @return void
  */
 function allow_all_admin_menu_items( $user ) {
+    // Bail if admin menu removal is disabled — the checkbox has no effect without it.
+    if ( ! \apply_filters( 'meom_dodo_enable_admin_menu_removal', true ) ) {
+        return;
+    }
+
     // Get user meta for allowing all admin menu items.
     $allow_all_menu_items = get_user_option( '_meom_dodo_allow_all_menu_items', $user->ID );
     ?>
@@ -44,6 +49,11 @@ add_action( 'edit_user_profile', __NAMESPACE__ . '\allow_all_admin_menu_items' )
  * @return bool true on successful update, false on failure.
  */
 function save_all_admin_menu_items( $user_id ) {
+    // Bail if admin menu removal is disabled — the checkbox has no effect without it.
+    if ( ! \apply_filters( 'meom_dodo_enable_admin_menu_removal', true ) ) {
+        return false;
+    }
+
     // Check user capability.
     if ( ! current_user_can( 'edit_user', $user_id ) ) {
         return false;
