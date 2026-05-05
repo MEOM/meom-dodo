@@ -135,3 +135,13 @@ function prefix_removed_admin_menu_items( $removed_admin_menu_items ) {
 }
 add_filter( 'meom_dodo_removed_admin_menu_items', 'prefix_removed_admin_menu_items' );
 ```
+
+### meom_dodo_disable_comments
+
+All commenting functionality is disabled by default (UI, endpoints, admin pages, and post type support). You can re-enable comments with the filter `meom_dodo_disable_comments`.
+
+Example usage:
+
+```php
+add_filter( 'meom_dodo_disable_comments', '__return_false' );
+```
