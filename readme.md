@@ -145,3 +145,48 @@ Example usage:
 ```php
 add_filter( 'meom_dodo_disable_comments', '__return_false' );
 ```
+
+### meom_dodo_enable_dashboard_widgets_removal
+
+Default dashboard widgets are removed by default. You can disable this feature entirely with the filter `meom_dodo_enable_dashboard_widgets_removal`.
+
+Example usage:
+
+```php
+add_filter( 'meom_dodo_enable_dashboard_widgets_removal', '__return_false' );
+```
+
+### meom_dodo_removed_dashboard_widgets
+
+By default some dashboard widgets are removed, including the third-party Kraken.io and Seravo PHP warning widgets. Each item maps a meta box ID to its context (`normal` or `side`). You can modify the list of removed dashboard widgets with the filter `meom_dodo_removed_dashboard_widgets`.
+
+```php
+/**
+ * Determine which dashboard widgets are removed.
+ *
+ * @param array  $removed_dashboard_widgets List of removed dashboard widgets ( id => context ).
+ * @return array $removed_dashboard_widgets Modified array of removed dashboard widgets.
+ */
+function prefix_removed_dashboard_widgets( $removed_dashboard_widgets ) {
+    $removed_dashboard_widgets = [
+        'dashboard_right_now'   => 'normal',
+        'dashboard_activity'    => 'normal',
+        'dashboard_site_health' => 'normal',
+        'dashboard_quick_press' => 'side',
+        'dashboard_primary'     => 'side',
+    ];
+
+    return $removed_dashboard_widgets;
+}
+add_filter( 'meom_dodo_removed_dashboard_widgets', 'prefix_removed_dashboard_widgets' );
+```
+
+### meom_dodo_enable_kraken_media_panel_removal
+
+The Kraken.io summary panel (`.kraken-summary--media`) that the Kraken Image Optimizer prints on the Media Library, Add New Media and Plugins screens is removed by default. You can disable this feature with the filter `meom_dodo_enable_kraken_media_panel_removal`.
+
+Example usage:
+
+```php
+add_filter( 'meom_dodo_enable_kraken_media_panel_removal', '__return_false' );
+```

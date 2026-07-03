@@ -4,7 +4,7 @@
  * Author: MEOM
  * Author URI: https://www.meom.fi/
  * Description: Clean up WordPress.
- * Version: 1.8
+ * Version: 1.10
  * License: GPL2 or later.
  * Text Domain: meom-dodo
  * Domain Path: /languages
@@ -24,6 +24,8 @@ add_action( 'plugins_loaded', 'meom_dodo_i18n', 2 );
 require_once __DIR__ . '/inc/contact-dashboard-widget.php';
 require_once __DIR__ . '/inc/disable-comments.php';
 require_once __DIR__ . '/inc/enqueue-assets.php';
+require_once __DIR__ . '/inc/remove-dashboard-widgets.php';
+require_once __DIR__ . '/inc/remove-kraken-media-panel.php';
 require_once __DIR__ . '/inc/remove-editor-settings.php';
 require_once __DIR__ . '/inc/remove-svg-filters.php';
 require_once __DIR__ . '/inc/security.php';
