@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 1.11 released November 13, 2026
+
+### Added
+- Disable the random content redirect (`/random/` endpoint) introduced in WordPress 7.2. Re-enable it with the filter `meom_dodo_enable_random_content_redirect_removal`.
+
 ## Version 1.4 released February 8, 2023
 
 ### Added
