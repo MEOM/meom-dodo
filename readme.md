@@ -190,3 +190,15 @@ Example usage:
 ```php
 add_filter( 'meom_dodo_enable_kraken_media_panel_removal', '__return_false' );
 ```
+
+### meom_dodo_enable_random_content_redirect_removal
+
+The random content redirect introduced in WordPress 7.2 (`/random/` endpoint) is disabled by default. You can re-enable it with the filter `meom_dodo_enable_random_content_redirect_removal`.
+
+Example usage:
+
+```php
+add_filter( 'meom_dodo_enable_random_content_redirect_removal', '__return_false' );
+```
+
+Note! Re-save permalinks (or run `wp rewrite flush`) after changing this, so the rewrite rules are regenerated.
