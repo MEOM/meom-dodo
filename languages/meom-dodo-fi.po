@@ -89,6 +89,31 @@ msgstr "MEOM"
 msgid "https://www.meom.fi/"
 msgstr "https://www.meom.fi/"
 
+
+#: inc/llms-txt.php
+msgid "You are not allowed to do this."
+msgstr "Sinulla ei ole oikeutta tähän."
+
+#: inc/llms-txt.php
+msgid "llms.txt saved."
+msgstr "llms.txt tallennettu."
+
+#: inc/llms-txt.php
+msgid "This site serves llms.txt from a file in the code. Changes saved here are not visible until MEOM removes the old file."
+msgstr "Tämä sivusto näyttää llms.txt:n koodiin lisätystä tiedostosta. Tähän tallennetut muutokset eivät näy ennen kuin MEOM poistaa vanhan tiedoston."
+
+#: inc/llms-txt.php
+msgid "Add the llms.txt content in Markdown format. Leave empty to disable."
+msgstr "Lisää llms.txt-sisältö Markdown-muodossa. Jätä tyhjäksi, jos llms.txt:tä ei haluta käyttöön."
+
+#: inc/llms-txt.php
+msgid "Format guide"
+msgstr "Ohje muotoiluun"
+
+#: inc/llms-txt.php
+msgid "Public address:"
+msgstr "Julkinen osoite:"
+
 #~ msgid "MEOM Contact"
 #~ msgstr "MEOM yhteystiedot"
 
