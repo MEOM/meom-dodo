@@ -202,3 +202,21 @@ add_filter( 'meom_dodo_enable_random_content_redirect_removal', '__return_false'
 ```
 
 Note! Re-save permalinks (or run `wp rewrite flush`) after changing this, so the rewrite rules are regenerated.
+
+### meom_dodo_enable_llms_txt
+
+Site admins can manage the `/llms.txt` content in Markdown under **Tools > llms.txt**. In multisite every sub-site has its own content. Empty content returns the normal 404. Disable the feature with the filter `meom_dodo_enable_llms_txt`.
+
+Example usage:
+
+```php
+add_filter( 'meom_dodo_enable_llms_txt', '__return_false' );
+```
+
+Note! A physical `htdocs/llms.txt` file or a `/llms.txt` rule in `nginx/*.conf` (e.g. `llms.conf` or `php.conf`) is served by nginx before WordPress, so it always wins. The admin page shows a warning in that case. To move an existing file to the admin, run in production (with `--url=<domain>` per sub-site in multisite):
+
+```bash
+wp option update meom_llms_txt "$(cat htdocs/llms.txt)" --autoload=no
+```
+
+Check the result with `curl`, and only then remove the file, `htdocs/llms/` and the `/llms.txt` nginx rule from git.
