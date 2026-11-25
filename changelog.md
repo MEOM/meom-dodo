@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## Version 1.12 released November 25, 2026
 
 ### Added
 - Tools > llms.txt admin page for managing the `/llms.txt` content per site (also per sub-site in multisite). Adds a new item to the Tools menu. Disable it with the filter `meom_dodo_enable_llms_txt`.
