@@ -16,6 +16,15 @@ namespace MEOM\Dodo;
 const LLMS_TXT_OPTION = 'meom_llms_txt';
 
 /**
+ * Capability required to manage llms.txt.
+ *
+ * Users with manage_options get it automatically. Themes give it to other
+ * roles, e.g. with MEOM Roles:
+ * $caps['editor']['meom_dodo_manage_llms_txt'] = true;
+ */
+const LLMS_TXT_CAPABILITY = 'meom_dodo_manage_llms_txt';
+
+/**
  * Whether the llms.txt feature is enabled.
  *
  * Evaluated inside hooks so that themes can still disable it from functions.php.
@@ -33,6 +42,21 @@ function llms_txt_enabled() {
      */
     return (bool) \apply_filters( 'meom_dodo_enable_llms_txt', true );
 }
+
+/**
+ * Give the llms.txt capability to everyone who has manage_options.
+ *
+ * @param array $allcaps The user's capabilities.
+ * @return array
+ */
+function grant_llms_txt_capability( $allcaps ) {
+    if ( is_array( $allcaps ) && ! empty( $allcaps['manage_options'] ) ) {
+        $allcaps[ LLMS_TXT_CAPABILITY ] = true;
+    }
+
+    return $allcaps;
+}
+\add_filter( 'user_has_cap', __NAMESPACE__ . '\grant_llms_txt_capability' );
 
 /**
  * Serve /llms.txt from the option.
@@ -77,7 +101,7 @@ function add_llms_txt_page() {
     \add_management_page(
         'llms.txt',
         'llms.txt',
-        'manage_options',
+        LLMS_TXT_CAPABILITY,
         'meom-llms-txt',
         __NAMESPACE__ . '\render_llms_txt_page'
     );
@@ -88,7 +112,7 @@ add_action( 'admin_menu', __NAMESPACE__ . '\add_llms_txt_page' );
  * Save the llms.txt content.
  */
 function save_llms_txt() {
-    if ( ! llms_txt_enabled() || ! \current_user_can( 'manage_options' ) ) {
+    if ( ! llms_txt_enabled() || ! \current_user_can( LLMS_TXT_CAPABILITY ) ) {
         \wp_die( \esc_html__( 'You are not allowed to do this.', 'meom-dodo' ), 403 );
     }
 
