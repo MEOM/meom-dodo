@@ -157,6 +157,21 @@ function llms_txt_served_by_code( $doc_root ) {
 }
 
 /**
+ * Whether Yoast SEO's own llms.txt feature is enabled.
+ *
+ * Yoast writes a physical llms.txt to the site root and rewrites it weekly,
+ * so it wins over the content saved here and comes back if only the file
+ * is deleted. Turning the feature off in Yoast removes the file.
+ *
+ * @return bool
+ */
+function yoast_llms_txt_enabled() {
+    $wpseo = \get_option( 'wpseo' );
+
+    return is_array( $wpseo ) && ! empty( $wpseo['enable_llms_txt'] );
+}
+
+/**
  * Render Tools > llms.txt page.
  */
 function render_llms_txt_page() {
@@ -172,7 +187,16 @@ function render_llms_txt_page() {
             <div class="notice notice-success is-dismissible"><p><?php \esc_html_e( 'llms.txt saved.', 'meom-dodo' ); ?></p></div>
         <?php endif; ?>
 
-        <?php if ( $overridden ) : ?>
+        <?php if ( yoast_llms_txt_enabled() ) : ?>
+            <div class="notice notice-warning">
+                <p>
+                    <?php \esc_html_e( 'llms.txt is turned on in Yoast SEO, so its file is shown instead of the content saved here. Turn it off in the Yoast SEO settings, and Yoast removes its file.', 'meom-dodo' ); ?>
+                    <?php if ( \current_user_can( 'wpseo_manage_options' ) ) : ?>
+                        <a href="<?php echo \esc_url( \admin_url( 'admin.php?page=wpseo_page_settings#/site-features#card-wpseo-enable_llms_txt' ) ); ?>"><?php \esc_html_e( 'Yoast SEO settings', 'meom-dodo' ); ?></a>
+                    <?php endif; ?>
+                </p>
+            </div>
+        <?php elseif ( $overridden ) : ?>
             <div class="notice notice-warning">
                 <p><?php \esc_html_e( 'This site serves llms.txt from a file in the code. Changes saved here are not visible until MEOM removes the old file.', 'meom-dodo' ); ?></p>
             </div>

@@ -221,6 +221,8 @@ wp option update meom_llms_txt "$(cat htdocs/llms.txt)" --autoload=no
 
 Check the result with `curl`, and only then remove the file, `htdocs/llms/` and the `/llms.txt` nginx rule from git.
 
+If llms.txt is turned on in Yoast SEO, Yoast writes its own `llms.txt` file to the site root and rewrites it weekly, so it wins too and comes back if only the file is deleted. The admin page shows a warning with a link to the Yoast settings. Turn the feature off in Yoast SEO, which also removes Yoast's file.
+
 #### Who can manage llms.txt
 
 The page requires the capability `meom_dodo_manage_llms_txt`. Everyone with `manage_options` (administrators) has it automatically. Give it to other roles in the theme, e.g. client admins (editors) with [MEOM Roles](https://github.com/MEOM/meom-roles):
