@@ -123,3 +123,9 @@ msgstr "Julkinen osoite:"
 #, php-format
 #~ msgid "Contact MEOM using email %s."
 #~ msgstr "Ota yhteyttä MEOM:iin, sähköposti %s."
+
+msgid "llms.txt is turned on in Yoast SEO, so its file is shown instead of the content saved here. Turn it off in the Yoast SEO settings, and Yoast removes its file."
+msgstr "llms.txt on päällä Yoast SEO:ssa, joten tämän sisällön sijaan näytetään Yoastin tiedosto. Kytke se pois Yoast SEO:n asetuksista, niin Yoast poistaa tiedostonsa."
+
+msgid "Yoast SEO settings"
+msgstr "Yoast SEO:n asetukset"

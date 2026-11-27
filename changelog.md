@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 1.13 released November 26, 2026
+
+### Changed
+- Tools > llms.txt requires its own capability `meom_dodo_manage_llms_txt` instead of `manage_options`. Users with `manage_options` get it automatically, so nothing changes for administrators. Themes can give it to other roles, e.g. editors with MEOM Roles' `meom_roles_caps` filter.
+
 ## Version 1.12 released November 25, 2026
 
 ### Added
